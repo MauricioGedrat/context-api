@@ -1,5 +1,5 @@
 import { createContext, ReactNode, useState } from "react";
-import users from "../users.json";
+import users from "../../users.json";
 
 interface ContextType {
   search: string;
