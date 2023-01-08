@@ -1,33 +1,43 @@
-import Image from "next/image";
-import React, { ReactNode } from "react";
+import { motion } from 'framer-motion'
+import Image from 'next/image'
+import { X } from 'phosphor-react'
+import React, { ReactNode } from 'react'
+import * as s from '../../../styles/TailwindStyles/modalStyles'
+import { ModalForm } from './ModalForm'
 
-interface ModalProps {
-  movieThumb?: JSX.Element;
-  movieTitle?: string;
-  movieDescription?: string;
-  movieId?: number;
-  closeModal: () => void;
-  children?: ReactNode;
+export interface ModalProps {
+  closeModal: () => void
+  children?: ReactNode
+  modalTitle?: string
 }
 
 export const Modal = (props: ModalProps) => {
-  const {
-    movieDescription,
-    movieId,
-    movieTitle,
-    movieThumb,
-    closeModal,
-    children,
-  } = props;
+  const { closeModal, children } = props
+
   return (
-    <div className="fixed flex justify-between items-center flex-col z-[100] bg-slate-900 top-0 bottom-0 right-0 left-0">
-      <div>
-        <button onClick={closeModal}>Close</button>
-      </div>
-      {children}
-      <span>{movieId}</span>
-      <h1>{movieTitle}</h1>
-      <p>{movieDescription}</p>
-    </div>
-  );
-};
+    <>
+      <motion.div
+        className={s.modalContainerStyles}
+        initial={{ scale: 0, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        exit={{ scale: 0, opacity: 0 }}
+      >
+        <div className={s.modalContentStyles}>
+          {/*content*/}
+          <div className={s.modalSemiContentStyles}>
+            {/*header*/}
+            <div className={s.modalHeaderContainerStyles}>
+              <h3 className={s.modalHeaderTitleStyles}>Modal Title</h3>
+              <button className={s.modalCloseButtonStyles} onClick={closeModal}>
+                <X size={24} />
+              </button>
+            </div>
+            {/*body*/}
+            <ModalForm closeModal={closeModal} />
+          </div>
+        </div>
+      </motion.div>
+      <div className={s.modalOverlayStyles}></div>
+    </>
+  )
+}

@@ -416,10 +416,10 @@ fraction.js@^4.2.0:
   resolved "https://registry.yarnpkg.com/fraction.js/-/fraction.js-4.2.0.tgz#448e5109a313a3527f5a3ab2119ec4cf0e0e2950"
   integrity sha512-MhLuK+2gUcnZe8ZHlaaINnQLl0xRIGRfcGk2yl8xoQAfHrSsL3rYu6FCmBdkdbhc9EPlwyGHewaRsvwRMJtAlA==
 
-framer-motion@^8.1.3:
-  version "8.1.3"
-  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-8.1.3.tgz#eb729e3a725e3b39525dd45ae62caf0c09f276aa"
-  integrity sha512-pvlAEwjl4W6EMRp0rvWABCk+YyrlnPMXYzgyhkLSnBq9TdACFNeJBql7E40pMS0ttaWMKfwmH1A/raFCtcMf/A==
+framer-motion@^8.1.9:
+  version "8.1.9"
+  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-8.1.9.tgz#c8ade497a35082e34adbb541a352e944344e912b"
+  integrity sha512-BPXdGhj3V/A1Ke3qDBIxBKvK1FPsbPqv12BA28fPptNvRjIRHPFxmw0WBC4rHOlGHUBxgg1DficZB1/uCpTTkQ==
   dependencies:
     "@motionone/dom" "^10.15.3"
     hey-listen "^1.0.8"
@@ -678,6 +678,11 @@ postcss@^8.4.18, postcss@^8.4.20:
     picocolors "^1.0.0"
     source-map-js "^1.0.2"
 
+prettier@^2.8.1:
+  version "2.8.1"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.8.1.tgz#4e1fd11c34e2421bc1da9aea9bd8127cd0a35efc"
+  integrity sha512-lqGoSJBQNJidqCHE80vqZJHWHRFoNYsSpP9AjFhlhi9ODCJA541svILes/+/1GM3VaL/abZi7cpFzOpdR9UPKg==
+
 proxy-from-env@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/proxy-from-env/-/proxy-from-env-1.1.0.tgz#e102f16ca355424865755d2c9e8ea4f24d58c3e2"
@@ -700,6 +705,11 @@ react-dom@18.2.0:
   dependencies:
     loose-envify "^1.1.0"
     scheduler "^0.23.0"
+
+react-hook-form@^7.41.5:
+  version "7.41.5"
+  resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.41.5.tgz#dcd0e7438c15044eadc99df6deb889da5858a03b"
+  integrity sha512-DAKjSJ7X9f16oQrP3TW2/eD9N6HOgrmIahP4LOdFphEWVfGZ2LulFd6f6AQ/YS/0cx/5oc4j8a1PXxuaurWp/Q==
 
 react@18.2.0:
   version "18.2.0"

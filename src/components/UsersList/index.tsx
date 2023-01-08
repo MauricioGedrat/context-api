@@ -1,24 +1,18 @@
-import { Trash } from "phosphor-react";
-import React, { useContext } from "react";
-import { NewContext } from "../../Context/context";
-import {
-  deleteButtonStyle,
-  userCardStyles,
-  usersListMapStyles,
-  usersListSectionStyles,
-  userTitleStyles,
-} from "../../styles/TailwindStyles/usersListStyles";
+import { Trash } from 'phosphor-react'
+import React, { useContext } from 'react'
+import { NewContext } from '../../Context/context'
+import * as s from '../../styles/TailwindStyles/usersListStyles'
 
 const UsersList = () => {
-  const { contactUsers, handleDelete } = useContext(NewContext);
+  const { contactUsers, handleDelete } = useContext(NewContext)
 
   return (
-    <section className={usersListSectionStyles}>
-      <div className={usersListMapStyles}>
+    <section className={s.usersListSectionStyles}>
+      <div className={s.usersListMapStyles}>
         {contactUsers.map((item) => {
           return (
-            <div key={item.id} className={userCardStyles}>
-              <h1 className={userTitleStyles}>
+            <div key={item.id} className={s.userCardStyles}>
+              <h1 className={s.userTitleStyles}>
                 {item.id}: {item.first_name} {item.last_name}:
               </h1>
               <p>{item.email}</p>
@@ -26,17 +20,17 @@ const UsersList = () => {
               <div>{item.ip_address}</div>
               <button
                 onClick={() => handleDelete(item.id)}
-                className={deleteButtonStyle}
+                className={s.deleteButtonStyle}
               >
                 Delete User
                 <Trash size={24} />
               </button>
             </div>
-          );
+          )
         })}
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default UsersList;
+export default UsersList
